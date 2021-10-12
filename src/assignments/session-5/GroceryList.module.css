@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+
+.type {
+  margin: 2rem;
+}
