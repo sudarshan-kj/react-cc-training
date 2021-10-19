@@ -63,16 +63,17 @@ function App() {
     ""
   );
   const [stories, setStories] = useState(initStories);
+
   const handleOnSearch = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleRemoveStory = (item) => {
-    const newStories = stories.filter(
-      (story) => item.objectID !== story.objectID
-    );
-    setStories(newStories);
+  const onHandleDeleteItem = (item) => {
+    const newList = stories.filter((i) => item.objectID !== i.objectID);
+    //make api call to the backend
+    setStories(newList);
   };
+
   const filteredStories = stories.filter((story) =>
     story.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -88,7 +89,7 @@ function App() {
         <strong>Search For Stories</strong>
       </InputWithLabel>
       <h4>Searching for: {searchTerm} </h4>
-      <List stories={filteredStories} handleRemoveStory={handleRemoveStory} />
+      <List stories={filteredStories} handleDeleteItem={onHandleDeleteItem} />
     </div>
   );
 }

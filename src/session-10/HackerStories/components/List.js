@@ -1,6 +1,6 @@
 import styles from "./List.module.css";
 
-function List({ stories, handleRemoveStory }) {
+function List({ stories, handleDeleteItem }) {
   return (
     <div>
       <ol>
@@ -14,9 +14,7 @@ function List({ stories, handleRemoveStory }) {
               <span className={styles.item}>{item.num_comments}</span>
               <span className={styles.item}>{item.points}</span>
               <span>
-                <button type="button" onClick={() => handleRemoveStory(item)}>
-                  Dismiss
-                </button>
+                <button onClick={() => handleDeleteItem(item)}>Delete</button>
               </span>
             </li>
           );

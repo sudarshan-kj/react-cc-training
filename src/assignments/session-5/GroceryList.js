@@ -56,8 +56,12 @@ const GroceryList = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.type}>
-        <h3>Veg Items</h3>
-        <ul>{filterOnType(list, "veg")}</ul>
+        <input type="text" />
+        <span></span>
+        <input type="password" />
+        <span></span>
+        <input type="text" />
+        <span></span>
         <button onClick={handleSort}>Sort</button>
       </div>
       <div className={styles.type}>
