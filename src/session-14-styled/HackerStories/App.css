@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  min-width: 1022px;
+  box-shadow: 0 0 50px 1px rgb(206, 248, 255);
+  padding: 2.2rem;
+  background-color: rgb(24, 24, 24);
+  border-radius: 12px;
+}

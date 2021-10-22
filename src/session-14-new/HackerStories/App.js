@@ -1,9 +1,9 @@
 import List from "./components/List";
-import styles from "./App.module.css";
 import React, { useState, useEffect, useReducer, useCallback } from "react";
 import usePersistenceState from "./hooks/usePersistenceState";
 import axios from "axios";
 import SearchForm from "./components/SearchForm";
+import "./App.css";
 
 const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?query=";
 
@@ -75,7 +75,7 @@ function App() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <SearchForm
         searchTerm={searchTerm}
         onSearchInput={handleSearchInput}
