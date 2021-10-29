@@ -1,4 +1,5 @@
 import InputWithLabel from "./InputWithLabel";
+import "./SearchForm.css";
 
 const SearchForm = ({ onSearchInput, onSearchSubmit, searchTerm }) => (
   <form onSubmit={onSearchSubmit}>
@@ -7,10 +8,8 @@ const SearchForm = ({ onSearchInput, onSearchSubmit, searchTerm }) => (
       value={searchTerm}
       onInputChange={onSearchInput}
       type="text"
-    >
-      <strong>Search For Stories</strong>
-    </InputWithLabel>
-    <button disabled={!searchTerm} type="submit">
+    ></InputWithLabel>
+    <button className="button" disabled={!searchTerm} type="submit">
       Submit
     </button>
   </form>

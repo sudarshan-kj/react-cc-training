@@ -1,9 +1,13 @@
+@import "./session-14-new/HackerStories/styles/global.css";
+
 body {
   margin: 0;
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
 }
 
 code {

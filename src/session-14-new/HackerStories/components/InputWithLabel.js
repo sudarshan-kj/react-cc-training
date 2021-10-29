@@ -6,30 +6,24 @@ const InputWithLabel = ({
   type = "text",
   value,
   onInputChange,
-  isFocused,
 }) => {
-  const [clickAutoFocus, setClickAutoFocus] = useState(false);
-  const inputRef = useRef();
-
-  useEffect(() => {
-    if (inputRef.current && clickAutoFocus) {
-      inputRef.current.focus();
-    }
-  }, [clickAutoFocus]);
-
   return (
     <>
       <label htmlFor={id}>{children}</label>
       <input
-        ref={inputRef}
+        style={{
+          display: "block",
+          padding: "1rem",
+          border: "none",
+          outline: "none",
+          borderRadius: "4px",
+          margin: "1rem 0",
+        }}
         id={id}
         type={type}
         value={value}
         onChange={onInputChange}
       />
-      <button onClick={() => setClickAutoFocus(true)}>
-        Click to Autofocus
-      </button>
     </>
   );
 };

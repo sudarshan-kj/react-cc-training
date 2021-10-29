@@ -1,0 +1,23 @@
+.item {
+  display: inline-block;
+  width: 200px;
+  padding: 1rem;
+  color: wheat;
+}
+
+.title {
+  color: ghostwhite;
+  text-decoration: none;
+}
+
+.button {
+  border: none;
+  padding: 0.5rem;
+  background-color: rgb(185, 1, 1);
+  color: whitesmoke;
+  border-radius: 6px;
+}
+
+.button:hover {
+  cursor: pointer;
+}

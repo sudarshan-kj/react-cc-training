@@ -14,7 +14,12 @@ function List({ stories, handleDeleteItem }) {
               <span className={styles.item}>{item.num_comments}</span>
               <span className={styles.item}>{item.points}</span>
               <span>
-                <button onClick={() => handleDeleteItem(item)}>Delete</button>
+                <button
+                  className={styles.button}
+                  onClick={() => handleDeleteItem(item)}
+                >
+                  Delete
+                </button>
               </span>
             </li>
           );
