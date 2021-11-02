@@ -1,12 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./session-15/HackerStories/App";
+import App from "./session-16/HackerStories/App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./session-16/HackerStories/components/Login";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route exact path="/" component={App} />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
